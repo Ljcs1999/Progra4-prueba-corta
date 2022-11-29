@@ -1,4 +1,5 @@
-import {Entity, model, property} from '@loopback/repository';
+import {Entity, model, property, hasMany} from '@loopback/repository';
+import {Solicitante} from './solicitante.model';
 
 @model()
 export class FiltroSolicitante extends Entity {
@@ -21,6 +22,8 @@ export class FiltroSolicitante extends Entity {
   })
   Requisitosaprobados: boolean;
 
+  @hasMany(() => Solicitante)
+  solicitantes: Solicitante[];
 
   constructor(data?: Partial<FiltroSolicitante>) {
     super(data);

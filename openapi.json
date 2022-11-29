@@ -1,0 +1,3267 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "backend-rrhh",
+    "version": "0.0.1",
+    "description": "backend-rrhh",
+    "contact": {
+      "name": "Ljcs1999",
+      "email": "Ljcs_1999@hotmail.com"
+    }
+  },
+  "paths": {
+    "/filtro-solicitantes/count": {
+      "get": {
+        "x-controller-name": "FiltroSolicitanteController",
+        "x-operation-name": "count",
+        "tags": [
+          "FiltroSolicitanteController"
+        ],
+        "responses": {
+          "200": {
+            "description": "FiltroSolicitante model count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "FiltroSolicitante.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<FiltroSolicitante>"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "FiltroSolicitanteController.count"
+      }
+    },
+    "/filtro-solicitantes/{id}/solicitantes": {
+      "post": {
+        "x-controller-name": "FiltroSolicitanteSolicitanteController",
+        "x-operation-name": "create",
+        "tags": [
+          "FiltroSolicitanteSolicitanteController"
+        ],
+        "responses": {
+          "200": {
+            "description": "FiltroSolicitante model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Solicitante"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewSolicitanteInFiltroSolicitante"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "FiltroSolicitanteSolicitanteController.create"
+      },
+      "patch": {
+        "x-controller-name": "FiltroSolicitanteSolicitanteController",
+        "x-operation-name": "patch",
+        "tags": [
+          "FiltroSolicitanteSolicitanteController"
+        ],
+        "responses": {
+          "200": {
+            "description": "FiltroSolicitante.Solicitante PATCH success count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Solicitante.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Solicitante>"
+                }
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SolicitantePartial"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "FiltroSolicitanteSolicitanteController.patch"
+      },
+      "get": {
+        "x-controller-name": "FiltroSolicitanteSolicitanteController",
+        "x-operation-name": "find",
+        "tags": [
+          "FiltroSolicitanteSolicitanteController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of FiltroSolicitante has many Solicitante",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Solicitante"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "FiltroSolicitanteSolicitanteController.find"
+      },
+      "delete": {
+        "x-controller-name": "FiltroSolicitanteSolicitanteController",
+        "x-operation-name": "delete",
+        "tags": [
+          "FiltroSolicitanteSolicitanteController"
+        ],
+        "responses": {
+          "200": {
+            "description": "FiltroSolicitante.Solicitante DELETE success count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Solicitante.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Solicitante>"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "FiltroSolicitanteSolicitanteController.delete"
+      }
+    },
+    "/filtro-solicitantes/{id}": {
+      "put": {
+        "x-controller-name": "FiltroSolicitanteController",
+        "x-operation-name": "replaceById",
+        "tags": [
+          "FiltroSolicitanteController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "FiltroSolicitante PUT success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FiltroSolicitante"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "FiltroSolicitanteController.replaceById"
+      },
+      "patch": {
+        "x-controller-name": "FiltroSolicitanteController",
+        "x-operation-name": "updateById",
+        "tags": [
+          "FiltroSolicitanteController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "FiltroSolicitante PATCH success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FiltroSolicitantePartial"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "FiltroSolicitanteController.updateById"
+      },
+      "get": {
+        "x-controller-name": "FiltroSolicitanteController",
+        "x-operation-name": "findById",
+        "tags": [
+          "FiltroSolicitanteController"
+        ],
+        "responses": {
+          "200": {
+            "description": "FiltroSolicitante model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FiltroSolicitanteWithRelations"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FiltroSolicitante.Filter"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "FiltroSolicitanteController.findById"
+      },
+      "delete": {
+        "x-controller-name": "FiltroSolicitanteController",
+        "x-operation-name": "deleteById",
+        "tags": [
+          "FiltroSolicitanteController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "FiltroSolicitante DELETE success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "operationId": "FiltroSolicitanteController.deleteById"
+      }
+    },
+    "/filtro-solicitantes": {
+      "post": {
+        "x-controller-name": "FiltroSolicitanteController",
+        "x-operation-name": "create",
+        "tags": [
+          "FiltroSolicitanteController"
+        ],
+        "responses": {
+          "200": {
+            "description": "FiltroSolicitante model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FiltroSolicitante"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewFiltroSolicitante"
+              }
+            }
+          }
+        },
+        "operationId": "FiltroSolicitanteController.create"
+      },
+      "patch": {
+        "x-controller-name": "FiltroSolicitanteController",
+        "x-operation-name": "updateAll",
+        "tags": [
+          "FiltroSolicitanteController"
+        ],
+        "responses": {
+          "200": {
+            "description": "FiltroSolicitante PATCH success count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "FiltroSolicitante.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<FiltroSolicitante>"
+                }
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FiltroSolicitantePartial"
+              }
+            }
+          }
+        },
+        "operationId": "FiltroSolicitanteController.updateAll"
+      },
+      "get": {
+        "x-controller-name": "FiltroSolicitanteController",
+        "x-operation-name": "find",
+        "tags": [
+          "FiltroSolicitanteController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of FiltroSolicitante model instances",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FiltroSolicitanteWithRelations"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FiltroSolicitante.Filter1"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "FiltroSolicitanteController.find"
+      }
+    },
+    "/ping": {
+      "get": {
+        "x-controller-name": "PingController",
+        "x-operation-name": "ping",
+        "tags": [
+          "PingController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Ping Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PingResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PingController.ping"
+      }
+    },
+    "/plazas/count": {
+      "get": {
+        "x-controller-name": "PlazasController",
+        "x-operation-name": "count",
+        "tags": [
+          "PlazasController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Plazas model count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Plazas.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Plazas>"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "PlazasController.count"
+      }
+    },
+    "/plazas/{id}/requisitos": {
+      "get": {
+        "x-controller-name": "PlazasRequisitosController",
+        "x-operation-name": "getRequisitos",
+        "tags": [
+          "PlazasRequisitosController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Requisitos belonging to Plazas",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Requisitos"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "operationId": "PlazasRequisitosController.getRequisitos"
+      }
+    },
+    "/plazas/{id}": {
+      "put": {
+        "x-controller-name": "PlazasController",
+        "x-operation-name": "replaceById",
+        "tags": [
+          "PlazasController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Plazas PUT success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Plazas"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "PlazasController.replaceById"
+      },
+      "patch": {
+        "x-controller-name": "PlazasController",
+        "x-operation-name": "updateById",
+        "tags": [
+          "PlazasController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Plazas PATCH success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PlazasPartial"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "PlazasController.updateById"
+      },
+      "get": {
+        "x-controller-name": "PlazasController",
+        "x-operation-name": "findById",
+        "tags": [
+          "PlazasController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Plazas model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlazasWithRelations"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Plazas.Filter"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "PlazasController.findById"
+      },
+      "delete": {
+        "x-controller-name": "PlazasController",
+        "x-operation-name": "deleteById",
+        "tags": [
+          "PlazasController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Plazas DELETE success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "operationId": "PlazasController.deleteById"
+      }
+    },
+    "/plazas": {
+      "post": {
+        "x-controller-name": "PlazasController",
+        "x-operation-name": "create",
+        "tags": [
+          "PlazasController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Plazas model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Plazas"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewPlazas"
+              }
+            }
+          }
+        },
+        "operationId": "PlazasController.create"
+      },
+      "patch": {
+        "x-controller-name": "PlazasController",
+        "x-operation-name": "updateAll",
+        "tags": [
+          "PlazasController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Plazas PATCH success count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Plazas.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Plazas>"
+                }
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PlazasPartial"
+              }
+            }
+          }
+        },
+        "operationId": "PlazasController.updateAll"
+      },
+      "get": {
+        "x-controller-name": "PlazasController",
+        "x-operation-name": "find",
+        "tags": [
+          "PlazasController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of Plazas model instances",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PlazasWithRelations"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Plazas.Filter1"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "PlazasController.find"
+      }
+    },
+    "/requisitos/count": {
+      "get": {
+        "x-controller-name": "RequisitosController",
+        "x-operation-name": "count",
+        "tags": [
+          "RequisitosController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Requisitos model count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Requisitos.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Requisitos>"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "RequisitosController.count"
+      }
+    },
+    "/requisitos/{id}/plazas": {
+      "post": {
+        "x-controller-name": "RequisitosPlazasController",
+        "x-operation-name": "create",
+        "tags": [
+          "RequisitosPlazasController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Requisitos model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Plazas"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewPlazasInRequisitos"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "RequisitosPlazasController.create"
+      },
+      "patch": {
+        "x-controller-name": "RequisitosPlazasController",
+        "x-operation-name": "patch",
+        "tags": [
+          "RequisitosPlazasController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Requisitos.Plazas PATCH success count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Plazas.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Plazas>"
+                }
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PlazasPartial"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "RequisitosPlazasController.patch"
+      },
+      "get": {
+        "x-controller-name": "RequisitosPlazasController",
+        "x-operation-name": "find",
+        "tags": [
+          "RequisitosPlazasController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of Requisitos has many Plazas",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Plazas"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "RequisitosPlazasController.find"
+      },
+      "delete": {
+        "x-controller-name": "RequisitosPlazasController",
+        "x-operation-name": "delete",
+        "tags": [
+          "RequisitosPlazasController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Requisitos.Plazas DELETE success count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Plazas.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Plazas>"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "RequisitosPlazasController.delete"
+      }
+    },
+    "/requisitos/{id}": {
+      "put": {
+        "x-controller-name": "RequisitosController",
+        "x-operation-name": "replaceById",
+        "tags": [
+          "RequisitosController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Requisitos PUT success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Requisitos"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "RequisitosController.replaceById"
+      },
+      "patch": {
+        "x-controller-name": "RequisitosController",
+        "x-operation-name": "updateById",
+        "tags": [
+          "RequisitosController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Requisitos PATCH success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequisitosPartial"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "RequisitosController.updateById"
+      },
+      "get": {
+        "x-controller-name": "RequisitosController",
+        "x-operation-name": "findById",
+        "tags": [
+          "RequisitosController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Requisitos model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RequisitosWithRelations"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Requisitos.Filter"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "RequisitosController.findById"
+      },
+      "delete": {
+        "x-controller-name": "RequisitosController",
+        "x-operation-name": "deleteById",
+        "tags": [
+          "RequisitosController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Requisitos DELETE success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "operationId": "RequisitosController.deleteById"
+      }
+    },
+    "/requisitos": {
+      "post": {
+        "x-controller-name": "RequisitosController",
+        "x-operation-name": "create",
+        "tags": [
+          "RequisitosController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Requisitos model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Requisitos"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewRequisitos"
+              }
+            }
+          }
+        },
+        "operationId": "RequisitosController.create"
+      },
+      "patch": {
+        "x-controller-name": "RequisitosController",
+        "x-operation-name": "updateAll",
+        "tags": [
+          "RequisitosController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Requisitos PATCH success count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Requisitos.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Requisitos>"
+                }
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequisitosPartial"
+              }
+            }
+          }
+        },
+        "operationId": "RequisitosController.updateAll"
+      },
+      "get": {
+        "x-controller-name": "RequisitosController",
+        "x-operation-name": "find",
+        "tags": [
+          "RequisitosController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of Requisitos model instances",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RequisitosWithRelations"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Requisitos.Filter1"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "RequisitosController.find"
+      }
+    },
+    "/solicitantes/count": {
+      "get": {
+        "x-controller-name": "SolicitanteController",
+        "x-operation-name": "count",
+        "tags": [
+          "SolicitanteController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Solicitante model count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Solicitante.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Solicitante>"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "SolicitanteController.count"
+      }
+    },
+    "/solicitantes/{id}/filtro-solicitante": {
+      "get": {
+        "x-controller-name": "SolicitanteFiltroSolicitanteController",
+        "x-operation-name": "getFiltroSolicitante",
+        "tags": [
+          "SolicitanteFiltroSolicitanteController"
+        ],
+        "responses": {
+          "200": {
+            "description": "FiltroSolicitante belonging to Solicitante",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FiltroSolicitante"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "operationId": "SolicitanteFiltroSolicitanteController.getFiltroSolicitante"
+      }
+    },
+    "/solicitantes/{id}": {
+      "put": {
+        "x-controller-name": "SolicitanteController",
+        "x-operation-name": "replaceById",
+        "tags": [
+          "SolicitanteController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Solicitante PUT success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Solicitante"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "SolicitanteController.replaceById"
+      },
+      "patch": {
+        "x-controller-name": "SolicitanteController",
+        "x-operation-name": "updateById",
+        "tags": [
+          "SolicitanteController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Solicitante PATCH success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SolicitantePartial"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "SolicitanteController.updateById"
+      },
+      "get": {
+        "x-controller-name": "SolicitanteController",
+        "x-operation-name": "findById",
+        "tags": [
+          "SolicitanteController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Solicitante model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SolicitanteWithRelations"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Solicitante.Filter"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "SolicitanteController.findById"
+      },
+      "delete": {
+        "x-controller-name": "SolicitanteController",
+        "x-operation-name": "deleteById",
+        "tags": [
+          "SolicitanteController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Solicitante DELETE success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "operationId": "SolicitanteController.deleteById"
+      }
+    },
+    "/solicitantes": {
+      "post": {
+        "x-controller-name": "SolicitanteController",
+        "x-operation-name": "create",
+        "tags": [
+          "SolicitanteController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Solicitante model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Solicitante"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewSolicitante"
+              }
+            }
+          }
+        },
+        "operationId": "SolicitanteController.create"
+      },
+      "patch": {
+        "x-controller-name": "SolicitanteController",
+        "x-operation-name": "updateAll",
+        "tags": [
+          "SolicitanteController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Solicitante PATCH success count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Solicitante.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Solicitante>"
+                }
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SolicitantePartial"
+              }
+            }
+          }
+        },
+        "operationId": "SolicitanteController.updateAll"
+      },
+      "get": {
+        "x-controller-name": "SolicitanteController",
+        "x-operation-name": "find",
+        "tags": [
+          "SolicitanteController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of Solicitante model instances",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SolicitanteWithRelations"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Solicitante.Filter1"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "SolicitanteController.find"
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "/"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "Solicitante": {
+        "title": "Solicitante",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "Nombre": {
+            "type": "string"
+          },
+          "Edad": {
+            "type": "number"
+          },
+          "Estadocivil": {
+            "type": "string"
+          },
+          "Cedula": {
+            "type": "number"
+          },
+          "Direccion": {
+            "type": "string"
+          },
+          "Nivelacademico": {
+            "type": "string"
+          },
+          "filtroSolicitanteId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "Nombre",
+          "Edad",
+          "Estadocivil",
+          "Cedula",
+          "Direccion",
+          "Nivelacademico"
+        ],
+        "additionalProperties": false
+      },
+      "NewSolicitanteInFiltroSolicitante": {
+        "title": "NewSolicitanteInFiltroSolicitante",
+        "type": "object",
+        "description": "(tsType: @loopback/repository-json-schema#Optional<Omit<Solicitante, 'id'>, 'filtroSolicitanteId'>, schemaOptions: { title: 'NewSolicitanteInFiltroSolicitante', exclude: [ 'id' ], optional: [ 'filtroSolicitanteId' ] })",
+        "properties": {
+          "Nombre": {
+            "type": "string"
+          },
+          "Edad": {
+            "type": "number"
+          },
+          "Estadocivil": {
+            "type": "string"
+          },
+          "Cedula": {
+            "type": "number"
+          },
+          "Direccion": {
+            "type": "string"
+          },
+          "Nivelacademico": {
+            "type": "string"
+          },
+          "filtroSolicitanteId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "Nombre",
+          "Edad",
+          "Estadocivil",
+          "Cedula",
+          "Direccion",
+          "Nivelacademico"
+        ],
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository-json-schema#Optional<Omit<Solicitante, 'id'>, 'filtroSolicitanteId'>"
+      },
+      "SolicitantePartial": {
+        "title": "SolicitantePartial",
+        "type": "object",
+        "description": "(tsType: Partial<Solicitante>, schemaOptions: { partial: true })",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "Nombre": {
+            "type": "string"
+          },
+          "Edad": {
+            "type": "number"
+          },
+          "Estadocivil": {
+            "type": "string"
+          },
+          "Cedula": {
+            "type": "number"
+          },
+          "Direccion": {
+            "type": "string"
+          },
+          "Nivelacademico": {
+            "type": "string"
+          },
+          "filtroSolicitanteId": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "Partial<Solicitante>"
+      },
+      "FiltroSolicitante": {
+        "title": "FiltroSolicitante",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "Nombre": {
+            "type": "string"
+          },
+          "Requisitosaprobados": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "Nombre",
+          "Requisitosaprobados"
+        ],
+        "additionalProperties": false
+      },
+      "NewFiltroSolicitante": {
+        "title": "NewFiltroSolicitante",
+        "type": "object",
+        "description": "(tsType: Omit<FiltroSolicitante, 'id'>, schemaOptions: { title: 'NewFiltroSolicitante', exclude: [ 'id' ] })",
+        "properties": {
+          "Nombre": {
+            "type": "string"
+          },
+          "Requisitosaprobados": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "Nombre",
+          "Requisitosaprobados"
+        ],
+        "additionalProperties": false,
+        "x-typescript-type": "Omit<FiltroSolicitante, 'id'>"
+      },
+      "SolicitanteWithRelations": {
+        "title": "SolicitanteWithRelations",
+        "type": "object",
+        "description": "(tsType: SolicitanteWithRelations, schemaOptions: { includeRelations: true })",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "Nombre": {
+            "type": "string"
+          },
+          "Edad": {
+            "type": "number"
+          },
+          "Estadocivil": {
+            "type": "string"
+          },
+          "Cedula": {
+            "type": "number"
+          },
+          "Direccion": {
+            "type": "string"
+          },
+          "Nivelacademico": {
+            "type": "string"
+          },
+          "filtroSolicitanteId": {
+            "type": "string"
+          },
+          "filtroSolicitante": {
+            "$ref": "#/components/schemas/FiltroSolicitanteWithRelations"
+          }
+        },
+        "required": [
+          "Nombre",
+          "Edad",
+          "Estadocivil",
+          "Cedula",
+          "Direccion",
+          "Nivelacademico"
+        ],
+        "additionalProperties": false,
+        "x-typescript-type": "SolicitanteWithRelations"
+      },
+      "FiltroSolicitanteWithRelations": {
+        "title": "FiltroSolicitanteWithRelations",
+        "type": "object",
+        "description": "(tsType: FiltroSolicitanteWithRelations, schemaOptions: { includeRelations: true })",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "Nombre": {
+            "type": "string"
+          },
+          "Requisitosaprobados": {
+            "type": "boolean"
+          },
+          "solicitantes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SolicitanteWithRelations"
+            }
+          }
+        },
+        "required": [
+          "Nombre",
+          "Requisitosaprobados"
+        ],
+        "additionalProperties": false,
+        "x-typescript-type": "FiltroSolicitanteWithRelations"
+      },
+      "FiltroSolicitantePartial": {
+        "title": "FiltroSolicitantePartial",
+        "type": "object",
+        "description": "(tsType: Partial<FiltroSolicitante>, schemaOptions: { partial: true })",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "Nombre": {
+            "type": "string"
+          },
+          "Requisitosaprobados": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "Partial<FiltroSolicitante>"
+      },
+      "Requisitos": {
+        "title": "Requisitos",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "Edad": {
+            "type": "number"
+          },
+          "Experiencia": {
+            "type": "string"
+          },
+          "Estudios": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "Edad",
+          "Experiencia",
+          "Estudios"
+        ],
+        "additionalProperties": false
+      },
+      "Plazas": {
+        "title": "Plazas",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "Nombre": {
+            "type": "string"
+          },
+          "Salario": {
+            "type": "number"
+          },
+          "Cargalaboral": {
+            "type": "string"
+          },
+          "requisitosId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "Nombre",
+          "Salario",
+          "Cargalaboral"
+        ],
+        "additionalProperties": false
+      },
+      "NewPlazas": {
+        "title": "NewPlazas",
+        "type": "object",
+        "description": "(tsType: Omit<Plazas, 'id'>, schemaOptions: { title: 'NewPlazas', exclude: [ 'id' ] })",
+        "properties": {
+          "Nombre": {
+            "type": "string"
+          },
+          "Salario": {
+            "type": "number"
+          },
+          "Cargalaboral": {
+            "type": "string"
+          },
+          "requisitosId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "Nombre",
+          "Salario",
+          "Cargalaboral"
+        ],
+        "additionalProperties": false,
+        "x-typescript-type": "Omit<Plazas, 'id'>"
+      },
+      "RequisitosWithRelations": {
+        "title": "RequisitosWithRelations",
+        "type": "object",
+        "description": "(tsType: RequisitosWithRelations, schemaOptions: { includeRelations: true })",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "Edad": {
+            "type": "number"
+          },
+          "Experiencia": {
+            "type": "string"
+          },
+          "Estudios": {
+            "type": "string"
+          },
+          "plazas": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PlazasWithRelations"
+            }
+          }
+        },
+        "required": [
+          "Edad",
+          "Experiencia",
+          "Estudios"
+        ],
+        "additionalProperties": false,
+        "x-typescript-type": "RequisitosWithRelations"
+      },
+      "PlazasWithRelations": {
+        "title": "PlazasWithRelations",
+        "type": "object",
+        "description": "(tsType: PlazasWithRelations, schemaOptions: { includeRelations: true })",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "Nombre": {
+            "type": "string"
+          },
+          "Salario": {
+            "type": "number"
+          },
+          "Cargalaboral": {
+            "type": "string"
+          },
+          "requisitosId": {
+            "type": "string"
+          },
+          "requisitos": {
+            "$ref": "#/components/schemas/RequisitosWithRelations"
+          }
+        },
+        "required": [
+          "Nombre",
+          "Salario",
+          "Cargalaboral"
+        ],
+        "additionalProperties": false,
+        "x-typescript-type": "PlazasWithRelations"
+      },
+      "PlazasPartial": {
+        "title": "PlazasPartial",
+        "type": "object",
+        "description": "(tsType: Partial<Plazas>, schemaOptions: { partial: true })",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "Nombre": {
+            "type": "string"
+          },
+          "Salario": {
+            "type": "number"
+          },
+          "Cargalaboral": {
+            "type": "string"
+          },
+          "requisitosId": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "Partial<Plazas>"
+      },
+      "NewPlazasInRequisitos": {
+        "title": "NewPlazasInRequisitos",
+        "type": "object",
+        "description": "(tsType: @loopback/repository-json-schema#Optional<Omit<Plazas, 'id'>, 'requisitosId'>, schemaOptions: { title: 'NewPlazasInRequisitos', exclude: [ 'id' ], optional: [ 'requisitosId' ] })",
+        "properties": {
+          "Nombre": {
+            "type": "string"
+          },
+          "Salario": {
+            "type": "number"
+          },
+          "Cargalaboral": {
+            "type": "string"
+          },
+          "requisitosId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "Nombre",
+          "Salario",
+          "Cargalaboral"
+        ],
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository-json-schema#Optional<Omit<Plazas, 'id'>, 'requisitosId'>"
+      },
+      "NewRequisitos": {
+        "title": "NewRequisitos",
+        "type": "object",
+        "description": "(tsType: Omit<Requisitos, 'id'>, schemaOptions: { title: 'NewRequisitos', exclude: [ 'id' ] })",
+        "properties": {
+          "Edad": {
+            "type": "number"
+          },
+          "Experiencia": {
+            "type": "string"
+          },
+          "Estudios": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "Edad",
+          "Experiencia",
+          "Estudios"
+        ],
+        "additionalProperties": false,
+        "x-typescript-type": "Omit<Requisitos, 'id'>"
+      },
+      "RequisitosPartial": {
+        "title": "RequisitosPartial",
+        "type": "object",
+        "description": "(tsType: Partial<Requisitos>, schemaOptions: { partial: true })",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "Edad": {
+            "type": "number"
+          },
+          "Experiencia": {
+            "type": "string"
+          },
+          "Estudios": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "Partial<Requisitos>"
+      },
+      "NewSolicitante": {
+        "title": "NewSolicitante",
+        "type": "object",
+        "description": "(tsType: Omit<Solicitante, 'id'>, schemaOptions: { title: 'NewSolicitante', exclude: [ 'id' ] })",
+        "properties": {
+          "Nombre": {
+            "type": "string"
+          },
+          "Edad": {
+            "type": "number"
+          },
+          "Estadocivil": {
+            "type": "string"
+          },
+          "Cedula": {
+            "type": "number"
+          },
+          "Direccion": {
+            "type": "string"
+          },
+          "Nivelacademico": {
+            "type": "string"
+          },
+          "filtroSolicitanteId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "Nombre",
+          "Edad",
+          "Estadocivil",
+          "Cedula",
+          "Direccion",
+          "Nivelacademico"
+        ],
+        "additionalProperties": false,
+        "x-typescript-type": "Omit<Solicitante, 'id'>"
+      },
+      "loopback.Count": {
+        "type": "object",
+        "title": "loopback.Count",
+        "x-typescript-type": "@loopback/repository#Count",
+        "properties": {
+          "count": {
+            "type": "number"
+          }
+        }
+      },
+      "FiltroSolicitante.ScopeFilter": {
+        "type": "object",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "where": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {},
+                "additionalProperties": true
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "uniqueItems": true
+              }
+            ]
+          },
+          "include": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {},
+              "additionalProperties": true
+            }
+          }
+        },
+        "additionalProperties": false,
+        "title": "FiltroSolicitante.ScopeFilter"
+      },
+      "FiltroSolicitante.IncludeFilter.Items": {
+        "title": "FiltroSolicitante.IncludeFilter.Items",
+        "type": "object",
+        "properties": {
+          "relation": {
+            "type": "string"
+          },
+          "scope": {
+            "$ref": "#/components/schemas/FiltroSolicitante.ScopeFilter"
+          }
+        }
+      },
+      "FiltroSolicitante.Filter": {
+        "type": "object",
+        "title": "FiltroSolicitante.Filter",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "boolean"
+                  },
+                  "Nombre": {
+                    "type": "boolean"
+                  },
+                  "Requisitosaprobados": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "Nombre",
+                    "Requisitosaprobados"
+                  ],
+                  "example": "id"
+                },
+                "uniqueItems": true
+              }
+            ],
+            "title": "FiltroSolicitante.Fields"
+          },
+          "include": {
+            "title": "FiltroSolicitante.IncludeFilter",
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/FiltroSolicitante.IncludeFilter.Items"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository#Filter<FiltroSolicitante>"
+      },
+      "FiltroSolicitante.Filter1": {
+        "type": "object",
+        "title": "FiltroSolicitante.Filter",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "where": {
+            "title": "FiltroSolicitante.WhereFilter",
+            "type": "object",
+            "additionalProperties": true
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "boolean"
+                  },
+                  "Nombre": {
+                    "type": "boolean"
+                  },
+                  "Requisitosaprobados": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "Nombre",
+                    "Requisitosaprobados"
+                  ],
+                  "example": "id"
+                },
+                "uniqueItems": true
+              }
+            ],
+            "title": "FiltroSolicitante.Fields"
+          },
+          "include": {
+            "title": "FiltroSolicitante.IncludeFilter",
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/FiltroSolicitante.IncludeFilter.Items"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository#Filter<FiltroSolicitante>"
+      },
+      "PingResponse": {
+        "type": "object",
+        "title": "PingResponse",
+        "properties": {
+          "greeting": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "headers": {
+            "type": "object",
+            "properties": {
+              "Content-Type": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": true
+          }
+        }
+      },
+      "Plazas.ScopeFilter": {
+        "type": "object",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "where": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {},
+                "additionalProperties": true
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "uniqueItems": true
+              }
+            ]
+          },
+          "include": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {},
+              "additionalProperties": true
+            }
+          }
+        },
+        "additionalProperties": false,
+        "title": "Plazas.ScopeFilter"
+      },
+      "Plazas.IncludeFilter.Items": {
+        "title": "Plazas.IncludeFilter.Items",
+        "type": "object",
+        "properties": {
+          "relation": {
+            "type": "string"
+          },
+          "scope": {
+            "$ref": "#/components/schemas/Plazas.ScopeFilter"
+          }
+        }
+      },
+      "Plazas.Filter": {
+        "type": "object",
+        "title": "Plazas.Filter",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "boolean"
+                  },
+                  "Nombre": {
+                    "type": "boolean"
+                  },
+                  "Salario": {
+                    "type": "boolean"
+                  },
+                  "Cargalaboral": {
+                    "type": "boolean"
+                  },
+                  "requisitosId": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "Nombre",
+                    "Salario",
+                    "Cargalaboral",
+                    "requisitosId"
+                  ],
+                  "example": "id"
+                },
+                "uniqueItems": true
+              }
+            ],
+            "title": "Plazas.Fields"
+          },
+          "include": {
+            "title": "Plazas.IncludeFilter",
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Plazas.IncludeFilter.Items"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository#Filter<Plazas>"
+      },
+      "Plazas.Filter1": {
+        "type": "object",
+        "title": "Plazas.Filter",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "where": {
+            "title": "Plazas.WhereFilter",
+            "type": "object",
+            "additionalProperties": true
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "boolean"
+                  },
+                  "Nombre": {
+                    "type": "boolean"
+                  },
+                  "Salario": {
+                    "type": "boolean"
+                  },
+                  "Cargalaboral": {
+                    "type": "boolean"
+                  },
+                  "requisitosId": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "Nombre",
+                    "Salario",
+                    "Cargalaboral",
+                    "requisitosId"
+                  ],
+                  "example": "id"
+                },
+                "uniqueItems": true
+              }
+            ],
+            "title": "Plazas.Fields"
+          },
+          "include": {
+            "title": "Plazas.IncludeFilter",
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Plazas.IncludeFilter.Items"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository#Filter<Plazas>"
+      },
+      "Requisitos.ScopeFilter": {
+        "type": "object",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "where": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {},
+                "additionalProperties": true
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "uniqueItems": true
+              }
+            ]
+          },
+          "include": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {},
+              "additionalProperties": true
+            }
+          }
+        },
+        "additionalProperties": false,
+        "title": "Requisitos.ScopeFilter"
+      },
+      "Requisitos.IncludeFilter.Items": {
+        "title": "Requisitos.IncludeFilter.Items",
+        "type": "object",
+        "properties": {
+          "relation": {
+            "type": "string"
+          },
+          "scope": {
+            "$ref": "#/components/schemas/Requisitos.ScopeFilter"
+          }
+        }
+      },
+      "Requisitos.Filter": {
+        "type": "object",
+        "title": "Requisitos.Filter",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "boolean"
+                  },
+                  "Edad": {
+                    "type": "boolean"
+                  },
+                  "Experiencia": {
+                    "type": "boolean"
+                  },
+                  "Estudios": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "Edad",
+                    "Experiencia",
+                    "Estudios"
+                  ],
+                  "example": "id"
+                },
+                "uniqueItems": true
+              }
+            ],
+            "title": "Requisitos.Fields"
+          },
+          "include": {
+            "title": "Requisitos.IncludeFilter",
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Requisitos.IncludeFilter.Items"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository#Filter<Requisitos>"
+      },
+      "Requisitos.Filter1": {
+        "type": "object",
+        "title": "Requisitos.Filter",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "where": {
+            "title": "Requisitos.WhereFilter",
+            "type": "object",
+            "additionalProperties": true
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "boolean"
+                  },
+                  "Edad": {
+                    "type": "boolean"
+                  },
+                  "Experiencia": {
+                    "type": "boolean"
+                  },
+                  "Estudios": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "Edad",
+                    "Experiencia",
+                    "Estudios"
+                  ],
+                  "example": "id"
+                },
+                "uniqueItems": true
+              }
+            ],
+            "title": "Requisitos.Fields"
+          },
+          "include": {
+            "title": "Requisitos.IncludeFilter",
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Requisitos.IncludeFilter.Items"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository#Filter<Requisitos>"
+      },
+      "Solicitante.ScopeFilter": {
+        "type": "object",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "where": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {},
+                "additionalProperties": true
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "uniqueItems": true
+              }
+            ]
+          },
+          "include": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {},
+              "additionalProperties": true
+            }
+          }
+        },
+        "additionalProperties": false,
+        "title": "Solicitante.ScopeFilter"
+      },
+      "Solicitante.IncludeFilter.Items": {
+        "title": "Solicitante.IncludeFilter.Items",
+        "type": "object",
+        "properties": {
+          "relation": {
+            "type": "string"
+          },
+          "scope": {
+            "$ref": "#/components/schemas/Solicitante.ScopeFilter"
+          }
+        }
+      },
+      "Solicitante.Filter": {
+        "type": "object",
+        "title": "Solicitante.Filter",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "boolean"
+                  },
+                  "Nombre": {
+                    "type": "boolean"
+                  },
+                  "Edad": {
+                    "type": "boolean"
+                  },
+                  "Estadocivil": {
+                    "type": "boolean"
+                  },
+                  "Cedula": {
+                    "type": "boolean"
+                  },
+                  "Direccion": {
+                    "type": "boolean"
+                  },
+                  "Nivelacademico": {
+                    "type": "boolean"
+                  },
+                  "filtroSolicitanteId": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "Nombre",
+                    "Edad",
+                    "Estadocivil",
+                    "Cedula",
+                    "Direccion",
+                    "Nivelacademico",
+                    "filtroSolicitanteId"
+                  ],
+                  "example": "id"
+                },
+                "uniqueItems": true
+              }
+            ],
+            "title": "Solicitante.Fields"
+          },
+          "include": {
+            "title": "Solicitante.IncludeFilter",
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Solicitante.IncludeFilter.Items"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository#Filter<Solicitante>"
+      },
+      "Solicitante.Filter1": {
+        "type": "object",
+        "title": "Solicitante.Filter",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "where": {
+            "title": "Solicitante.WhereFilter",
+            "type": "object",
+            "additionalProperties": true
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "boolean"
+                  },
+                  "Nombre": {
+                    "type": "boolean"
+                  },
+                  "Edad": {
+                    "type": "boolean"
+                  },
+                  "Estadocivil": {
+                    "type": "boolean"
+                  },
+                  "Cedula": {
+                    "type": "boolean"
+                  },
+                  "Direccion": {
+                    "type": "boolean"
+                  },
+                  "Nivelacademico": {
+                    "type": "boolean"
+                  },
+                  "filtroSolicitanteId": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "Nombre",
+                    "Edad",
+                    "Estadocivil",
+                    "Cedula",
+                    "Direccion",
+                    "Nivelacademico",
+                    "filtroSolicitanteId"
+                  ],
+                  "example": "id"
+                },
+                "uniqueItems": true
+              }
+            ],
+            "title": "Solicitante.Fields"
+          },
+          "include": {
+            "title": "Solicitante.IncludeFilter",
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Solicitante.IncludeFilter.Items"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository#Filter<Solicitante>"
+      }
+    }
+  }
+}

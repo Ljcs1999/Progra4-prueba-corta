@@ -1,4 +1,5 @@
-import {Entity, model, property} from '@loopback/repository';
+import {Entity, model, property, belongsTo} from '@loopback/repository';
+import {FiltroSolicitante} from './filtro-solicitante.model';
 
 @model()
 export class Solicitante extends Entity {
@@ -45,6 +46,8 @@ export class Solicitante extends Entity {
   })
   Nivelacademico: string;
 
+  @belongsTo(() => FiltroSolicitante)
+  filtroSolicitanteId: string;
 
   constructor(data?: Partial<Solicitante>) {
     super(data);
