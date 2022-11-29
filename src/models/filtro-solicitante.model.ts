@@ -19,7 +19,7 @@ export class FiltroSolicitante extends Entity {
     type: 'boolean',
     required: true,
   })
-  Requisitos-aprobados: boolean;
+  Requisitosaprobados: boolean;
 
 
   constructor(data?: Partial<FiltroSolicitante>) {

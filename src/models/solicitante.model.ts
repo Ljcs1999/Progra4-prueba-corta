@@ -25,7 +25,7 @@ export class Solicitante extends Entity {
     type: 'string',
     required: true,
   })
-  Estado-civil: string;
+  Estadocivil: string;
 
   @property({
     type: 'number',
@@ -43,7 +43,7 @@ export class Solicitante extends Entity {
     type: 'string',
     required: true,
   })
-  Nivel-academico: string;
+  Nivelacademico: string;
 
 
   constructor(data?: Partial<Solicitante>) {

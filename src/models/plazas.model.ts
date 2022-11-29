@@ -25,7 +25,7 @@ export class Plazas extends Entity {
     type: 'string',
     required: true,
   })
-  Carga-laboral: string;
+  Cargalaboral: string;
 
 
   constructor(data?: Partial<Plazas>) {
